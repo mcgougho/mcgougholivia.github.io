@@ -1,0 +1,4 @@
+title: My GitHub Page
+description: A personal website built with GitHub Pages
+url: "https://mcgougholivia.github.io" # the base hostname & protocol for your site
+theme: jekyll-theme-minimal
