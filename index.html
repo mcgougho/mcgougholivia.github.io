@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ hullo }}</title>
+    <title>{{ site.title }}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,45 +11,79 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .container {
+        .header {
             display: flex;
             align-items: center;
+            margin-bottom: 30px;
         }
-        .image-container {
-            flex: 1;
-            padding-right: 20px;
+        .photo-container {
+            flex-shrink: 0;
+            margin-right: 20px;
         }
-        .content-container {
-            flex: 2;
+        .photo-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Ensures the image covers the entire area without distortion */
         }
-        .content-container h1 {
-            margin-top: 0;
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .name {
+            font-size: 2em; /* Larger font size for the name */
+            margin: 0;
+        }
+        .email {
+            font-size: 1.2em;
+            color: #007acc;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+        .email:hover {
+            text-decoration: underline;
+        }
+        .about-section {
+            margin-top: 40px;
+        }
+        .about-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333;
         }
         .cv-link {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007acc;
-            color: white;
+            font-size: 1.2em;
+            color: #007acc;
             text-decoration: none;
-            border-radius: 5px;
         }
         .cv-link:hover {
-            background-color: #005ea6;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-container">
-            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough" style="width: 100%; max-width: 150px; border-radius: 50%;">
+    <div class="header">
+        <div class="photo-container">
+            <img src="Olivia_McGough_90.jpg" alt="Olivia McGough">
         </div>
-        <div class="content-container">
-            <h1>Olivia McGough</h1>
-            <p>Bio??.</p>
-            <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link">Download My CV</a>
+        <div class="info-container">
+            <div class="name">Olivia McGough</div>
+            <a href="mailto:mcgougho@uw.edu" class="email">mcgougho@uw.edu</a>
         </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-title">About</div>
+        <div class="bio">
+            Bio!!
+        </div>
+        <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link">Link to my current CV</a>
     </div>
 </body>
 </html>
+
 
