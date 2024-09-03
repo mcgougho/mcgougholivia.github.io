@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1000px; /* Increased max-width to accommodate larger image */
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -20,9 +20,10 @@
             margin-right: 30px;
         }
         .photo-container img {
-            width: 300px; /* Increased size of the image */
-            height: auto; /* Keep the image's aspect ratio */
+            width: 300px;
+            height: auto;
             object-fit: cover;
+            border-radius: 8px; /* Optional: adds slight rounding to corners */
         }
         .content-container {
             max-width: 600px;
@@ -30,17 +31,30 @@
             flex-direction: column;
         }
         .name {
-            font-size: 2.5em; /* Larger font size for the name */
+            font-size: 2.5em;
             margin: 0;
         }
-        .email {
+        .contact-info {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .contact-link {
             font-size: 1.2em;
             color: #007acc;
             text-decoration: none;
-            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .email:hover {
+        .contact-link:hover {
             text-decoration: underline;
+        }
+        .contact-link img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
         .about-section {
             margin-top: 40px;
@@ -53,6 +67,7 @@
             font-size: 1.2em;
             margin-bottom: 20px;
             color: #333;
+            line-height: 1.6;
         }
         .cv-link {
             font-size: 1.2em;
@@ -71,14 +86,23 @@
         </div>
         <div class="content-container">
             <div class="name">Olivia McGough</div>
-            <a href="mailto:mcgougho@uw.edu" class="email">mcgougho@uw.edu</a>
-
+            <div class="contact-info">
+                <a href="mailto:mcgougho@uw.edu" class="contact-link">
+                    <img src="email-icon.png" alt="Email Icon">
+                    mcgougho@uw.edu
+                </a>
+                <a href="https://scholar.google.com/citations?user=lzCgQy8AAAAJ" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <img src="google-scholar-icon.png" alt="Google Scholar Icon">
+                    Google Scholar Profile
+                </a>
+            </div>
             <div class="about-section">
                 <div class="about-title">About</div>
                 <div class="bio">
-                    Bio!! <!-- Replace this text with your actual bio -->
+                    <!-- Your bio goes here -->
+                    I am a dedicated researcher specializing in computational biology and data analysis. My work focuses on leveraging machine learning techniques to understand complex biological systems and contribute to advancements in healthcare. I am passionate about interdisciplinary collaboration and continuous learning.
                 </div>
-                <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link">Link to my current CV</a>
+                <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">Link to my current CV</a>
             </div>
         </div>
     </div>
