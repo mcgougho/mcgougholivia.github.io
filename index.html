@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>{{ hullo }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .content-container {
+            flex: 2;
+        }
+        .content-container h1 {
+            margin-top: 0;
+        }
+        .cv-link {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cv-link:hover {
+            background-color: #005ea6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site!</h1>
-    <p>This is my first GitHub Pages site, hosted directly from my repository.</p>
+    <div class="container">
+        <div class="image-container">
+            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough" style="width: 100%; max-width: 150px; border-radius: 50%;">
+        </div>
+        <div class="content-container">
+            <h1>Olivia McGough</h1>
+            <p>Bio??.</p>
+            <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link">Download My CV</a>
+        </div>
+    </div>
 </body>
 </html>
+
