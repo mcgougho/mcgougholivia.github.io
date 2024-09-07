@@ -75,15 +75,16 @@
         /* Media Queries for smaller screens (mobile) */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stack image and content vertically */
+                flex-direction: column; /* Stack content and image */
                 align-items: center;
-            }
-            .photo-container {
-                margin-right: 0;
-                margin-bottom: 20px;
             }
             .content-container {
                 max-width: 100%; /* Use full width on smaller screens */
+            }
+            .photo-container {
+                margin-right: 0;
+                margin-top: 20px; /* Adds space between content and image */
+                order: 2; /* Ensures the photo appears after the content */
             }
             .name {
                 font-size: 2em; /* Adjust font size for smaller screens */
@@ -102,9 +103,6 @@
 </head>
 <body>
     <div class="container">
-        <div class="photo-container">
-            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough">
-        </div>
         <div class="content-container">
             <div class="name">Olivia McGough</div>
             <div class="contact-info">
@@ -122,6 +120,9 @@
                 </div>
                 <a href="McGough_Olivia_CV_Sept2024.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">Link to my current CV</a>
             </div>
+        </div>
+        <div class="photo-container">
+            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough">
         </div>
     </div>
 </body>
