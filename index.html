@@ -14,16 +14,18 @@
         .container {
             display: flex;
             align-items: flex-start;
+            flex-wrap: wrap; /* Allows content to wrap on smaller screens */
         }
         .photo-container {
             flex-shrink: 0;
             margin-right: 30px;
         }
         .photo-container img {
-            width: 350px; /* Increased size of the image */
+            width: 100%; /* Make the image responsive */
+            max-width: 350px; /* Set max width for larger screens */
             height: auto;
             object-fit: cover;
-            border-radius: 8px; /* Optional: adds slight rounding to corners */
+            border-radius: 8px;
         }
         .content-container {
             max-width: 600px;
@@ -68,6 +70,33 @@
         }
         .cv-link:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries for smaller screens (mobile) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack image and content vertically */
+                align-items: center;
+            }
+            .photo-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .content-container {
+                max-width: 100%; /* Use full width on smaller screens */
+            }
+            .name {
+                font-size: 2em; /* Adjust font size for smaller screens */
+            }
+            .contact-link, .bio, .cv-link {
+                font-size: 1em; /* Slightly smaller fonts for mobile */
+            }
+            .about-title {
+                font-size: 1.5em;
+            }
+            body {
+                padding: 10px;
+            }
         }
     </style>
 </head>
