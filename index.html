@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia McGough</title> <!-- Updated site title -->
+    <title>Olivia McGough - About Me</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,118 +10,77 @@
             margin: 0 auto;
             padding: 20px;
         }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
         .container {
             display: flex;
+            flex-wrap: wrap;
             align-items: flex-start;
-            flex-wrap: wrap; /* Allows content to wrap on smaller screens */
         }
         .photo-container {
             flex-shrink: 0;
             margin-right: 30px;
         }
         .photo-container img {
-            width: 100%; /* Make the image responsive */
-            max-width: 350px; /* Set max width for larger screens */
+            max-width: 350px;
             height: auto;
-            object-fit: cover;
             border-radius: 8px;
         }
         .content-container {
             max-width: 600px;
-            display: flex;
-            flex-direction: column;
         }
         .name {
             font-size: 2.5em;
-            margin: 0;
+            margin-bottom: 10px;
         }
         .contact-info {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            margin-bottom: 20px;
         }
         .contact-link {
+            display: block;
             font-size: 1.2em;
             color: #007acc;
             text-decoration: none;
-        }
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-        .about-section {
-            margin-top: 40px;
         }
         .about-title {
             font-size: 1.8em;
-            margin-bottom: 10px;
+            margin-top: 20px;
         }
         .bio {
             font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #333;
             line-height: 1.6;
-        }
-        .cv-link {
-            font-size: 1.2em;
-            color: #007acc;
-            text-decoration: none;
-        }
-        .cv-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries for smaller screens (mobile) */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Stack content and image */
-                align-items: center;
-            }
-            .content-container {
-                max-width: 100%; /* Use full width on smaller screens */
-            }
-            .photo-container {
-                margin-right: 0;
-                margin-top: 20px; /* Adds space between content and image */
-                order: 2; /* Ensures the photo appears after the content */
-            }
-            .name {
-                font-size: 2em; /* Adjust font size for smaller screens */
-            }
-            .contact-link, .bio, .cv-link {
-                font-size: 1em; /* Slightly smaller fonts for mobile */
-            }
-            .about-title {
-                font-size: 1.5em;
-            }
-            body {
-                padding: 10px;
-            }
+            color: #333;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="cv.html">CV</a>
+        <a href="papers.html">Papers</a>
+    </nav>
+
     <div class="container">
+        <div class="photo-container">
+            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough">
+        </div>
         <div class="content-container">
             <div class="name">Olivia McGough</div>
             <div class="contact-info">
-                <a href="mailto:mcgougho@uw.edu" class="contact-link">
-                    mcgougho@uw.edu
-                </a>
-                <a href="https://scholar.google.com/citations?user=lzCgQy8AAAAJ" class="contact-link" target="_blank" rel="noopener noreferrer">
-                    Google Scholar Profile
-                </a>
+                <a href="mailto:mcgougho@uw.edu" class="contact-link">mcgougho@uw.edu</a>
+                <a href="https://scholar.google.com/citations?user=lzCgQy8AAAAJ" class="contact-link" target="_blank">Google Scholar Profile</a>
             </div>
-            <div class="about-section">
-                <div class="about-title">About</div>
-                <div class="bio">
-                    I started my statistics PhD at the University of Washington in 2023 in Seattle, Washington. I got my bachelor's degree in Mathematics in 2023 from Reed College in Portland, Oregon. I am advised by Daniela Witten, and am broadly interested in selective inference research. 
-                </div>
-                <a href="mcgough_olivia_cv_june2025.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">Link to my current CV</a>
+            <div class="about-title">About</div>
+            <div class="bio">
+                I started my statistics PhD at the University of Washington in 2023 in Seattle, Washington. I got my bachelor's degree in Mathematics in 2023 from Reed College in Portland, Oregon. I am advised by Daniela Witten, and am broadly interested in selective inference research.
             </div>
-        </div>
-        <div class="photo-container">
-            <img src="Olivia_McGough_90.jpeg" alt="Olivia McGough">
         </div>
     </div>
 </body>
